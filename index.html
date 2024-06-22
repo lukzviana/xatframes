@@ -4,17 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+/* XATSPACE BY LUIG */
+/* XATSPACE BY LUIG */
+/* XATSPACE BY LUIG */
+/* XATSPACE BY LUIG */
+/* XATSPACE BY LUIG */
     body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111; /* Cor de fundo escura */
+    background-color: #1d1d1d; 
+    overflow: hidden;
 }
 
-.glitter-background {
-    position: fixed;
+.snowflakes {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -23,74 +29,168 @@
     z-index: -1;
 }
 
-.glitter {
+.snowflake {
     position: absolute;
-    background-color: #fff; /* Cor do glitter (branco) */
-    width: 10px;
-    height: 10px;
-    opacity: 0;
-    animation: glitter-fade 2s infinite;
+    background-color: #fff; 
+    width: 7px;
+    height: 7px;
+    opacity: 0.8;
+    animation: snowfall linear infinite;
 }
 
-.glitter:nth-child(1) {
-    top: 10%;
-    left: 20%;
-    animation-delay: 0.1s;
-}
-
-.glitter:nth-child(2) {
-    top: 20%;
-    left: 70%;
-    animation-delay: 0.2s;
-}
-
-.glitter:nth-child(3) {
-    top: 30%;
-    left: 40%;
-    animation-delay: 0.3s;
-}
-
-.glitter:nth-child(4) {
-    top: 40%;
-    left: 90%;
-    animation-delay: 0.4s;
-}
-
-.glitter:nth-child(5) {
-    top: 50%;
+.snowflake:nth-child(1) {
+    top: -10%;
     left: 10%;
-    animation-delay: 0.8s;
+    animation-duration: 10s;
 }
 
-@keyframes glitter-fade {
+.snowflake:nth-child(2) {
+    top: -10%;
+    left: 20%;
+    animation-duration: 4s;
+}
+
+.snowflake:nth-child(3) {
+    top: -10%;
+    left: 30%;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(4) {
+    top: -10%;
+    left: 40%;
+    animation-duration: 10s;
+}
+
+.snowflake:nth-child(5) {
+    top: -10%;
+    left: 50%;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(6) {
+    top: -10%;
+    left: 60%;
+    animation-duration: 6s;
+}
+
+.snowflake:nth-child(7) {
+    top: -10%;
+    left: 70%;
+    animation-duration: 4s;
+}
+
+.snowflake:nth-child(8) {
+    top: -10%;
+    left: 80%;
+    animation-duration: 6s;
+}
+
+.snowflake:nth-child(9) {
+    top: -10%;
+    left: 90%;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(10) {
+    top: -10%;
+    left: 100%;
+    animation-duration: 10s;
+}
+
+.snowflake:nth-child(11) {
+    top: 0%;
+    left: 95%;
+    animation-duration: 4s;
+}
+
+.snowflake:nth-child(12) {
+    top: 0%;
+    left: 85%;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(13) {
+    top: 0%;
+    left: 75%;
+    animation-duration: 10s;
+}
+
+.snowflake:nth-child(14) {
+    top: 0%;
+    left: 65%;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(15) {
+    top: 0%;
+    left: 55%;
+    animation-duration: 6s;
+}
+
+.snowflake:nth-child(16) {
+    top: 0%;
+    left: 45%;
+    animation-duration: 4s;
+}
+
+.snowflake:nth-child(17) {
+    top: 0%;
+    left: 35%;
+    animation-duration: 6s;
+}
+
+.snowflake:nth-child(18) {
+    top: 0%;
+    left: 25%;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(19) {
+    top: 0%;
+    left: 15%;
+    animation-duration: 10s;
+}
+
+.snowflake:nth-child(20) {
+    top: 0%;
+    left: 5%;
+    animation-duration: 5s;
+}
+
+@keyframes snowfall {
     0% {
-        opacity: 0;
         transform: translateY(-100%);
     }
-    25% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    75% {
-        opacity: 1;
-        transform: translateY(0);
-    }
     100% {
-        opacity: 0;
-        transform: translateY(100%);
+        transform: translateY(100vh);
     }
 }
 
-    </style>
+</style>
 </head>
 <body>
-<div class="glitter-background">
-    <div class="glitter"></div>
-    <div class="glitter"></div>
-    <div class="glitter"></div>
-    <div class="glitter"></div>
-    <div class="glitter"></div>
-    <!-- Adicione mais divs .glitter conforme necessário -->
+<div class="snowflakes">
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
 </div>
 </body>
 </html>

@@ -12,29 +12,14 @@
     /* XATSPACE BY LUIG */
     /* XATSPACE BY LUIG */
     /* XATSPACE BY LUIG */
-    
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
-    }
-
-    .video-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1; 
-      overflow: hidden;
-    }
-
-    #bg-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; 
+      background-color: #010101;
     }
 
     .firefly-container {
@@ -62,12 +47,8 @@
     }
 
     @keyframes fly {
-      0% {
-        transform: translateX(0) translateY(0);
-      }
-      100% {
-        transform: translateX(var(--moveX)) translateY(var(--moveY));
-      }
+      0% { transform: translateX(0) translateY(0); }
+      100% { transform: translateX(var(--moveX)) translateY(var(--moveY)); }
     }
 
     .container {
@@ -79,7 +60,7 @@
 
     .glass-effect {
       width: 400px;
-      padding: 60px;
+      padding: 60px 20px;
       background-color: rgba(255, 255, 255, 0.1); 
       border-radius: 15px;
       backdrop-filter: blur(10px);
@@ -91,8 +72,6 @@
       display: flex;
       flex-direction: column; 
       align-items: center; 
-      padding-left: 20px; 
-      padding-right: 20px; 
       position: relative;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -106,34 +85,25 @@
     }
 
     @keyframes bounce {
-      0% {
-        transform: scale(1); 
-      }
-      30% {
-        transform: scale(1.05); 
-      }
-      50% {
-        transform: scale(0.95); 
-      }
-      70% {
-        transform: scale(1.02); 
-      }
-      100% {
-        transform: scale(1);
-      }
+      0% { transform: scale(1); }
+      30% { transform: scale(1.05); }
+      50% { transform: scale(0.95); }
+      70% { transform: scale(1.02); }
+      100% { transform: scale(1); }
     }
 
     .glass-effect:hover {
       animation: bounce 0.6s ease; 
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
     }
+
     .glass-effect .avatar {
       width: 200px;
       height: 200px;
       border-radius: 50%; 
       margin-bottom: 15px; 
       object-fit: cover; 
-      transition: transform 0.6s ease, filter 0.6s ease
+      transition: transform 0.6s ease, filter 0.6s ease;
     }
 
     .glass-effect .avatar:hover {
@@ -154,7 +124,7 @@
       margin: 0;
       color: rgb(0, 0, 0);
       margin-bottom: 15px;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 1);
     }
 
     .glass-effect p2 {
@@ -163,19 +133,12 @@
       color: rgb(255, 255, 255);
       margin-top: 70px;
       margin-bottom: -50px;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 1);
     }
 
   </style>
 </head>
 <body>
-
-  <div class="video-container">
-    <video autoplay muted loop id="bg-video">
-      <source src="https://img.thuk.space/luig.mp4" type="video/mp4">
-      Seu navegador não suporta a tag de vídeo.
-    </video>
-  </div>
 
   <div class="firefly-container" id="firefly-container"></div>
 
@@ -214,15 +177,10 @@
 
   <div class="container">
     <div class="glass-effect">
-      <!-- Avatar -->
       <img src="https://xatimg.com/image/yNbNhE4PnmYm.gif" alt="Avatar" class="avatar">
-      <!-- Nome -->
-      <h1>Lukz</h1>
-      <!-- ID -->
+      <h1>Luig</h1>
       <p>10000270</p>
-      <!-- Frase -->
-      <p2>"Be the light you wish to see in the world." </p>
-      <!-- Ícone Home -->
+      <p2>"Be the light you wish to see in the world." </p2>
       <a href="https://www.xat.com/Ajuda" target="_blank">
         <img src="https://xatimg.com/image/Lf6NQCrsOx4S.png" alt="Casa" class="house-icon">
       </a>

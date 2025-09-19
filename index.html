@@ -11,7 +11,6 @@
     /* XATSPACE BY LUIG */
     /* XATSPACE BY LUIG */
     /* XATSPACE BY LUIG */
-    /* XATSPACE BY LUIG */
     
     html, body {
       margin: 0;
@@ -21,20 +20,18 @@
       font-family: Arial, sans-serif;
     }
 
-    .video-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1; 
-      overflow: hidden;
+    /* 🔥 Fundo com gradiente animado */
+    body {
+      background: linear-gradient(-45deg, #010101, #2E2E2E);
+      background-size: 400% 400%;
+      animation: gradient 5s ease infinite;
+      height: 100vh;
     }
 
-    #bg-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; 
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .firefly-container {
@@ -62,12 +59,8 @@
     }
 
     @keyframes fly {
-      0% {
-        transform: translateX(0) translateY(0);
-      }
-      100% {
-        transform: translateX(var(--moveX)) translateY(var(--moveY));
-      }
+      0% { transform: translateX(0) translateY(0); }
+      100% { transform: translateX(var(--moveX)) translateY(var(--moveY)); }
     }
 
     .container {
@@ -80,20 +73,28 @@
     .glass-effect {
       width: 400px;
       padding: 60px;
-      background-color: rgba(255, 255, 255, 0.1); 
       border-radius: 15px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px); 
-      border: 2px solid rgba(255, 255, 255, 0.2); 
-      color: white; 
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-      display: flex;
-      flex-direction: column; 
-      align-items: center; 
-      padding-left: 20px; 
-      padding-right: 20px; 
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: white;
+
+      background: #;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      border: 1px solid transparent;
+      background-image: 
+        linear-gradient(-45deg, #010101, #585858), 
+        linear-gradient(-45deg, #424242, #D8D8D8);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      background-size: 400% 400%;
+      animation: gradient 5s ease infinite;
+
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -106,34 +107,25 @@
     }
 
     @keyframes bounce {
-      0% {
-        transform: scale(1); 
-      }
-      30% {
-        transform: scale(1.05); 
-      }
-      50% {
-        transform: scale(0.95); 
-      }
-      70% {
-        transform: scale(1.02); 
-      }
-      100% {
-        transform: scale(1);
-      }
+      0% { transform: scale(1); }
+      30% { transform: scale(1.05); }
+      50% { transform: scale(0.95); }
+      70% { transform: scale(1.02); }
+      100% { transform: scale(1); }
     }
 
     .glass-effect:hover {
-      animation: bounce 0.6s ease; 
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+      animation: bounce 0.6s ease, gradient 5s ease infinite;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
     }
+
     .glass-effect .avatar {
       width: 200px;
       height: 200px;
       border-radius: 50%; 
       margin-bottom: 15px; 
       object-fit: cover; 
-      transition: transform 0.6s ease, filter 0.6s ease
+      transition: transform 0.6s ease, filter 0.6s ease;
     }
 
     .glass-effect .avatar:hover {
@@ -143,39 +135,36 @@
 
     .glass-effect h1 {
       font-size: 50px;
-      font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
       margin: 0;
-      color: white;
+      color: #a0a0a0;
+      font-family: 'system-ui';
     }
 
     .glass-effect p {
       font-size: 20px;
-      font-family: 'Courier New';
-      margin: 0;
-      color: rgb(0, 0, 0);
-      margin-bottom: 15px;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
+      font-family: 'system-ui';
+      margin: 0 0 15px;
+      color: #363636;
     }
 
     .glass-effect p2 {
-      font-size: 12px;
-      font-family: 'Courier New';
-      color: rgb(255, 255, 255);
-      margin-top: 70px;
-      margin-bottom: -50px;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
+      font-size: 15px;
+      font-family: 'Didot';
+      color: #363636;
+      margin-top: 50px;
+      margin-bottom: -10px;
     }
+
+    .glass-effect .title-top {
+  margin: 0 0 1px;
+  font-size: 15px;
+  font-family: 'Didot';
+  color: #363636;
+}
 
   </style>
 </head>
 <body>
-
-  <div class="video-container">
-    <video autoplay muted loop id="bg-video">
-      <source src="https://img.thuk.space/luig.mp4" type="video/mp4">
-      Seu navegador não suporta a tag de vídeo.
-    </video>
-  </div>
 
   <div class="firefly-container" id="firefly-container"></div>
 
@@ -183,46 +172,35 @@
     function random(min, max) {
       return Math.random() * (max - min) + min;
     }
-
     function createFireflies(amount) {
       const container = document.getElementById('firefly-container');
-      
       for (let i = 0; i < amount; i++) {
         const firefly = document.createElement('div');
         firefly.classList.add('firefly');
-        
         const size = random(3, 6); 
         const x = random(0, window.innerWidth);  
         const y = random(0, window.innerHeight); 
-
-        firefly.style.width = ${size}px;
-        firefly.style.height = ${size}px;
-        firefly.style.left = ${x}px;
-        firefly.style.top = ${y}px;
-
+        firefly.style.width = `${size}px`;
+        firefly.style.height = `${size}px`;
+        firefly.style.left = `${x}px`;
+        firefly.style.top = `${y}px`;
         const moveX = random(-200, 200); 
         const moveY = random(-200, 200); 
-        firefly.style.setProperty('--moveX', ${moveX}px);
-        firefly.style.setProperty('--moveY', ${moveY}px);
-
+        firefly.style.setProperty('--moveX', `${moveX}px`);
+        firefly.style.setProperty('--moveY', `${moveY}px`);
         container.appendChild(firefly);
       }
     }
-
     createFireflies(50);
   </script>
 
   <div class="container">
     <div class="glass-effect">
-      <!-- Avatar -->
-      <img src="https://xatimg.com/image/yNbNhE4PnmYm.gif" alt="Avatar" class="avatar">
-      <!-- Nome -->
-      <h1>Luig</h1>
-      <!-- ID -->
+      <img src="https://xatimg.com/image/381yCKet4XWU.jpg" alt="Avatar" class="avatar">
+      <h1>Lucas</h1>
       <p>10000270</p>
-      <!-- Frase -->
-      <p2>"Be the light you wish to see in the world." </p>
-      <!-- Ícone Home -->
+        <div class="title-top">smileymaker / designer / dataanalyst / projectmanager</div>
+      <p2>"be the light that wish to see in the world." </p2>
       <a href="https://www.xat.com/Ajuda" target="_blank">
         <img src="https://xatimg.com/image/Lf6NQCrsOx4S.png" alt="Casa" class="house-icon">
       </a>
